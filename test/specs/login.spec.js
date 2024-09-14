@@ -3,7 +3,7 @@ const Page = require('../pageobjects/page.js')
 const LoginPage = require('../pageobjects/login.page.js')
 const InventoryPage = require('../pageobjects/inventory.page.js')
 
-describe('My Login application', () => {
+describe('Login', () => {
     
     beforeEach(async () => {
         await Page.open('/')
