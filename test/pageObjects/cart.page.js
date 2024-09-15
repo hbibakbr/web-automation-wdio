@@ -9,10 +9,17 @@ class CartPage {
 
     }
 
+    get productTest () {
+        return $('//div[@data-test="inventory-item-name"]')
+    }
+
     get btnCheckout () {
         return $('//button[@id="checkout"]')
     }
 
+    async assertProductTest () {
+        await expect(this.productTest).toHaveText('Sauce Labs Backpack');
+    }
 }
 
 module.exports = new CartPage()

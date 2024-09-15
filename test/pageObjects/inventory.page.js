@@ -23,6 +23,10 @@ class InventoryPage {
         return $('//button[@id="remove-sauce-labs-backpack"]')
     }
 
+    get cart () {
+        return $('//a[@data-test="shopping-cart-link"]')
+    }
+
     get cartBadges () {
         return $('//span[@data-test="shopping-cart-badge"]')
     }
