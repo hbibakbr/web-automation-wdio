@@ -22,7 +22,7 @@ exports.config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        './test/specs/checkout.spec.js'
+        './test/specs/order.e2e.js'
     ],
     // Patterns to exclude.
     exclude: [
