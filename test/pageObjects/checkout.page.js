@@ -18,24 +18,30 @@ class CheckoutPage {
         return $('//input[@id="postal-code"]')
     }
 
-    btnContinue () {
-        return $('//button[@id="checkout"]')
+    get btnContinue () {
+        return $('//input[@id="continue"]')
     }
 
-    btnCancel () {
+    get btnCancel () {
         return $('//button[contains(@id,"cancel") and text() = "Cancel"]')
     }
 
-    msgFirstnameError () {
+    get msgFirstnameError () {
         return $('//h3[contains(@data-test, "error") and text() = "Error: First Name is required"]')
     }
 
-    msgLastnameError () {
+    get msgLastnameError () {
         return $('//h3[contains(@data-test, "error") and text() = "Error: Last Name is required"]')
     }
 
-    msgPostalCodeError () {
+    get msgPostalCodeError () {
         return $('//h3[contains(@data-test, "error") and text() = "Error: Postal Code is required"]')
+    }
+
+    async inputForm (firstname, lastname, postal) {
+        await this.inputFirstname.setValue(firstname)
+        await this.inputLastname.setValue(lastname)
+        await this.inputPostalCode.setValue(postal)
     }
 }
 

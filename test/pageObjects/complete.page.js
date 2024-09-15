@@ -18,6 +18,11 @@ class CompletePage {
         return $('//button[@id="back-to-products"]')
     }
 
+    async assertSuccessOrder () {
+        await expect(this.msgCompleteOrder).toBeExisting()
+        await expect(this.txtCompleteOrder).toBeExisting()
+    }
+
 }
 
 module.exports = new CompletePage()
