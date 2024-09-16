@@ -37,6 +37,7 @@ describe('End to End Testing Order', () => {
         await expect(CheckoutPage.inputFirstname).toBeExisting();
         await expect(CheckoutPage.inputLastname).toBeExisting();
         await expect(CheckoutPage.inputPostalCode).toBeExisting();
+        await browser.pause(2000);
 
         await CheckoutPage.inputForm('John', 'Doe', '1123');
         await CheckoutPage.btnContinue.click();
